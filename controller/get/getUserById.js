@@ -6,6 +6,6 @@ export const getUser = async (request, response) => {
     const user = await sql`SELECT * FROM user where id=${id}`;
     response.status(200).json({ user: user });
   } catch (error) {
-    response.status(400).json({ message: "bad request" });
+    response.status(400).json({ message: error });
   }
 };

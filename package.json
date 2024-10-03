@@ -1,11 +1,13 @@
 {
   "dependencies": {
+    "axios": "^1.7.7",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.21.0",
     "http-server": "^14.1.1",
     "nodemon": "^3.1.7",
-    "postgres": "^3.4.4"
+    "postgres": "^3.4.4",
+    "sonner": "^1.5.0"
   },
   "scripts": {
     "start": "nodemon -r @babel/register src/app.js"

@@ -5,6 +5,6 @@ export const getCategories = async (_request, response) => {
     const categories = await sql`SELECT * FROM categories`;
     response.status(200).json({ categories: categories });
   } catch (error) {
-    response.status(400).json({ message: "bad request" });
+    response.status(400).json({ message: error });
   }
 };
