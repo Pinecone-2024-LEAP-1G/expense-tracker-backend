@@ -9,7 +9,6 @@ export const addCategory = async (request, response) => {
                                     })`;
     response.status(200).json({ message: "Request has been done" });
   } catch (error) {
-    console.log(error);
     response.status(400).json({ message: "bad request" });
   }
 };
