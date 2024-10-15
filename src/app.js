@@ -13,7 +13,7 @@ const port = 8000;
 app.use("/user", userRouter);
 app.use("/transaction", transactionRouter);
 app.use("/category", categoryRouter);
-
+console.log("testing");
 app.listen(port, () => {
   console.log(`app is running at http://localhost:${port}`);
 });
