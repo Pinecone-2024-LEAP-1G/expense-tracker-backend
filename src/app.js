@@ -10,18 +10,18 @@ app.use(cors());
 app.use(express.json());
 const port = 8000;
 
-// app.use("/user", userRouter);
-// app.use("/transaction", transactionRouter);
-// app.use("/category", categoryRouter);
+app.use("/user", userRouter);
+app.use("/transaction", transactionRouter);
+app.use("/category", categoryRouter);
 
-app.use("/testing", async (request, response) => {
-  try {
-    response.status(200).json({ user: "testing path" });
-  } catch (error) {
-    response.status(400).json({ message: error });
-  }
-});
-console.log("testing");
+// app.use("/testing", async (request, response) => {
+//   try {
+//     response.status(200).json({ user: "testing path" });
+//   } catch (error) {
+//     response.status(400).json({ message: error });
+//   }
+// });
+
 app.listen(port, () => {
   console.log(`app is running at http://localhost:${port}`);
 });
